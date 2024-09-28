@@ -1,0 +1,44 @@
+#include <stdio.h>
+struct SparseElement {
+    int row;
+    int col;
+    int value;
+};
+
+int main() {
+    int row, col, i, j, count = 0,k=0,n;
+    struct SparseElement s1[100];
+    int a[10][10];
+    printf("Enter the number of rows: ");
+    scanf("%d", &row);
+    printf("Enter the number of columns: ");
+    scanf("%d", &col);
+
+    printf("Enter the elements of the matrix:\n");
+    for (i = 0; i < row; i++) {
+        for (j = 0; j < col; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+ for (i = 0; i < row; i++) {
+     for (j = 0; j < col; j++) {
+         if (a[i][j] != 0) {
+                s1[k].row = i;
+                s1[k].col = j;
+                s1[k].value = a[i][j];
+                k++, count++;
+        }
+     }
+ }
+
+   
+    printf("Non-Zero Elements : ");
+    printf("%d", count);
+    printf("\nSparse matrix :\n");
+    for (i = 0; i < k; i++) {
+        printf("(%d, %d, %d)\n", s1[i].row, s1[i].col, s1[i].value);
+    }
+
+    return 0;
+}
