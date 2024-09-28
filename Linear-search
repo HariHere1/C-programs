@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(){
+  	int num,n,check,i,flag=0,pos;
+   	printf("Enter the limit of the array");
+  	scanf("%d",&n);
+  	int a[n];
+ 	printf("Enter the elements to the array");
+  	for(i=0;i<=n;i++){
+  		scanf("%d",&a[i]);
+  	}
+  	printf("Enter the number to be checked");
+  	scanf("%d",&num);
+  	for(i=0;i<=n;i++){
+  		if(num==a[i]){
+  		flag=1;
+  		pos=i;
+  		break;
+  	}}
+  	if(flag==1){
+  		printf("The number is present in position  %d",pos);
+  	 }
+     else{
+   		printf("The number is not present");
+  	 }
+   return 0;
+   }
